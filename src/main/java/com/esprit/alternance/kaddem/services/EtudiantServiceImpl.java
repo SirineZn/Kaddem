@@ -3,6 +3,8 @@ package com.esprit.alternance.kaddem.services;
 import com.esprit.alternance.kaddem.entities.Etudiant;
 import com.esprit.alternance.kaddem.repositories.EtudiantRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

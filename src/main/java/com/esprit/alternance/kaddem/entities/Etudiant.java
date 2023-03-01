@@ -12,7 +12,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table( name = "Etudiant")
+@Table( name = "Etudiant") //Facultatif
 public class Etudiant implements Serializable {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
