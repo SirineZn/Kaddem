@@ -10,7 +10,11 @@ public interface IEtudiantService {
 
     Etudiant addEtudiant(Etudiant e);
 
-    Etudiant updateEtudiant (Etudiant e);
+    Etudiant updateEtudiant (Etudiant e, Integer idEtudiant);
 
     Etudiant retrieveEtudiant (Integer idEtudiant);
+
+    void deleteEtudiant(Integer idEtudiant);
+
+    void assignEtudiantToDepartement (Integer etudiantId , Long departementId );
 }

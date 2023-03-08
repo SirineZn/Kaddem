@@ -13,7 +13,7 @@ public class EquipeServiceImpl implements IEquipeService{
 
     @Override
     public List<Equipe> retrieveAllEquipes() {
-        return equipeRepository.findAll();
+        return (List<Equipe>) equipeRepository.findAll(); //retourer la liste de tous les equipes
     }
 
     @Override
@@ -24,6 +24,13 @@ public class EquipeServiceImpl implements IEquipeService{
     @Override
     public Equipe updateEquipe(Equipe e) {
         return equipeRepository.save(e);
+
+        //Equipe equipe1 = equipeRepository.findById(idEquipe).get();
+        //equipe1.setNomEquipe(equipe.getNomEquipe());
+        //equipe1.setNiveau(equipe.getNiveau());
+        //equipe1.setDetailEquipe(equipe.getDetailEquipe());
+
+        //return equipeRepository.save(equipe1);
     }
 
     @Override
