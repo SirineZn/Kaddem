@@ -4,6 +4,7 @@ import com.esprit.alternance.kaddem.entities.Departement;
 import com.esprit.alternance.kaddem.entities.Etudiant;
 import com.esprit.alternance.kaddem.repositories.DepartmentRepository;
 import com.esprit.alternance.kaddem.repositories.EtudiantRepository;
+import com.esprit.alternance.kaddem.repositories.UniversiteRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,7 @@ public class DepartementServiceImpl implements IDepartementService{
 
      DepartmentRepository departmentRepository;
      EtudiantRepository etudiantRepository;
+     UniversiteRepository universiteRepository;
     @Override
     public List<Departement> retrieveAllDepartment() {
         return (List<Departement>) departmentRepository.findAll();
@@ -43,5 +45,6 @@ public class DepartementServiceImpl implements IDepartementService{
     public void deleteDepartment(Long idDepartment) {
         departmentRepository.deleteById(idDepartment);
     }
+
 
 }

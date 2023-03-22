@@ -3,6 +3,7 @@ package com.esprit.alternance.kaddem.services;
 import com.esprit.alternance.kaddem.entities.Departement;
 import com.esprit.alternance.kaddem.entities.Etudiant;
 import com.esprit.alternance.kaddem.entities.Universite;
+import com.esprit.alternance.kaddem.repositories.DepartmentRepository;
 import com.esprit.alternance.kaddem.repositories.UniversiteRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ import java.util.Set;
 public class UniversiteServiceImpl implements IUniversiteService{
 
     UniversiteRepository universiteRepository;
+    DepartmentRepository departmentRepository;
 
 
     @Override
@@ -46,4 +48,8 @@ public class UniversiteServiceImpl implements IUniversiteService{
     public void deleteUniversite(Integer idUniversite) {
         universiteRepository.deleteById(idUniversite);
     }
+
+
+
+
 }
